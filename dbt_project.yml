@@ -34,7 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   jaffle_shop:
     test:
-      schema: stripe
+      schema: kkrause
     marts:
         core:
             +materialized: table
