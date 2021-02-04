@@ -47,11 +47,7 @@
 on ( DBT_INTERNAL_DEST.PARTITION_DATE = "2021-01-06" OR DBT_INTERNAL_DEST.PARTITION_DATE = "2021-01-07" ) and 
             DBT_INTERNAL_SOURCE.UNIQUE_KEY = DBT_INTERNAL_DEST.UNIQUE_KEY
 			
-			
-9925873			
-
-    and tgt.order_dt between '1992-01-01' and '1992-01-03'
-	
+				
 	
 {#
   Fork of common_get_merge_sql from the dbt source code that adds "destination_predicate_filter" config support.
