@@ -1,0 +1,30 @@
+version: 2
+
+models:
+    - name: prnt
+      description: Parent table
+      columns: 
+        - name: prnt_id
+          description: The primary key for prnt
+          tests:
+            - unique
+            - not_null
+            - accepted_values:
+                values: [1,2,3]            
+    - name: chld
+      description: Child table
+      columns: 
+        - name: chld_id
+          description: The primary key for chld
+          tests:
+            - unique
+            - not_null
+            - accepted_values:
+                values: [-1,-2,-3]
+        - name: prnt_id
+          description: The FK to prnt
+          tests:
+            - not_null  
+            - relationships:
+                to: ref('prnt')
+                field: prnt_id                      

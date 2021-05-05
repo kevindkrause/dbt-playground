@@ -6,7 +6,7 @@
     ) }}
 
 with new_data as(
-  select id from {{ref('wrk')}}
+  select id from wrk_v
 )       
 
 select id from new_data
