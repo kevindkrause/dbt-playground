@@ -26,5 +26,5 @@ models:
           tests:
             - not_null  
             - relationships:
-                to: ref('prnt')
+                to: kkrause.prnt
                 field: prnt_id                      
