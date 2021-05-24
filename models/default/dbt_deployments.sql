@@ -1,6 +1,6 @@
 with events as (
 
-    select * from {{ref('stg_dbt_audit_log')}}
+    select * from {{ref('dbt_audit_log')}}
 
 ),
 
