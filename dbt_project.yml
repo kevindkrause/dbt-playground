@@ -42,5 +42,10 @@ models:
         +materialized: table
   pre-hook: "{{ logging.log_model_start_event() }}"
   post-hook: "{{ logging.log_model_end_event() }}"        
-  
+  logging:
+    +schema: olo
+    bigquery:
+      +enabled: '{{ target.type == "bigquery" | as_bool }}'
+    default:
+      +enabled: '{{ target.type != "bigquery" | as_bool }}'  
         
