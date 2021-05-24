@@ -1,13 +1,13 @@
 {{ config(
-        materialized='incremental',
-        unique_key='c_custkey',
-        cluster_by='order_dt',
+        materialized = 'incremental',
+        unique_key = 'c_custkey',
+        cluster_by = 'order_dt',
         cluster_key_min_val = 'min_dt',
         cluster_key_max_val = 'max_dt'
          ) }}
 
 with src as (
-    select C_CUSTKEY, 'Kevin' as C_NAME, C_ADDRESS, C_NATIONKEY, C_PHONE, C_ACCTBAL, C_MKTSEGMENT, C_COMMENT, ORDER_DT
+    select c_custkey, 'Kevin' as c_name, c_address, c_nationkey, c_phone, c_acctbal, c_mktsegment, c_comment, order_dt
     from playground.kkrause.x
     where order_dt ='2021-02-04'
 )
