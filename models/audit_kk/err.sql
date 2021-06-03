@@ -9,4 +9,4 @@
 
 {% set p_id = 5 %}
 
-select '{{ p_id }} ' as id, '{{ invocation_id }}' as err_nm, 'special err' as err_type, 10/0 as val
+select '{{ p_id }} ' as id, '{{ invocation_id }}' as err_nm, 'special err' as err_type, 10/10 as val
