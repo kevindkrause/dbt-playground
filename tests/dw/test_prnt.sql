@@ -1,0 +1,1 @@
+select prnt_id from prnt group by 1 having count(*) > 1
